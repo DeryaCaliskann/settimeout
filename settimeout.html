@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Set Time Out</title>
+    </head>
+    <body>
+        <button onclick="ornek()">START</button>
+        <br>
+        <br>
+        <div id="sonuc">0</div>
+        <script type="text/javascript" Language="javascript">
+            function ornek(){
+                var sayidegeri = document.getElementById("sonuc").innerHTML;
+                sayidegeri = Number(sayidegeri)+1;
+                document.getElementById("sonuc").innerHTML = sayidegeri;
+                setTimeout(function(){
+                    ornek();
+                }, 1000);                
+            }           
+        </script>        
+    </body>
+</html>
